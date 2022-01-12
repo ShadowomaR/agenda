@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AjaxController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages/welcome');
+    return view('pages/try');
 });
-Route::get('/about', function () {
-    return view('pages/about');
-});
+Route::get('ajax',function() {
+    return view('pages/message');
+ });
+
+ Route::get('getmsg', [AjaxController::class, 'autosearch'])->name('search');
