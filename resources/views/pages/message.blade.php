@@ -10,7 +10,7 @@
             $.ajax({
                 url:"/getmsg",
                 type:'GET',
-                data:{'name':'query'},
+                data:{'nom':'oui'},
                success:function(data) {
                   console.log(data);
                },

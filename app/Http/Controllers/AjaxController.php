@@ -12,7 +12,9 @@ class AjaxController extends Controller
     }
 
     public function autosearch(Request $request) {
-        $msg = 'This is a simple message.'.$request->name;
+        //$msg = 'This is a simple message.'.$request->name;
+        if($request->name) $msg = 'This is a simple message.'.$request->name;
+        else if($request->nom) $msg = 'This is a simple message.'.$request->nom;
         return $msg;
     }
 }

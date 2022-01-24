@@ -19,5 +19,7 @@ Route::get('/', function () {
 Route::get('ajax',function() {
     return view('pages/message');
  });
-
+ Route::get('/w', function () {
+    return view('pages/welcome');
+});
  Route::get('getmsg', [AjaxController::class, 'autosearch'])->name('search');
